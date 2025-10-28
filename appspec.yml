@@ -21,7 +21,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /node_srv/app.js
+  - source: node_srv/app.js
     destination: /home/ubuntu/sample_app/node_srv
 file_exists_behavior: OVERWRITE
 hooks:
