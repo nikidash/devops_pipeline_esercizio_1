@@ -1,19 +1,39 @@
+# version: 0.0
+# os: linux
+# files:
+#   - source: /index.html
+#     destination: /var/www/html/
+# file_exists_behavior: OVERWRITE
+# hooks:
+# ApplicationStop:
+#   - location: scripts/stop_server.sh
+#     timeout: 30
+#     runas: root
+# BeforeInstall:
+#   - location: scripts/install_dependencies.sh
+#     timeout: 30
+#     runas: root
+# ApplicationStart:
+#   - location: scripts/start_server.sh
+#     timeout: 30
+#     runas: root
+
 version: 0.0
 os: linux
 files:
-  - source: /index.html
-    destination: /var/www/html/
+  - source: /node_srv/app.js
+    destination: /home/ubuntu/sample_app/node_srv
 file_exists_behavior: OVERWRITE
 hooks:
 ApplicationStop:
-  - location: scripts/stop_server.sh
+  - location: scripts/stop_node_srv.sh
     timeout: 30
     runas: root
-BeforeInstall:
-  - location: scripts/install_dependencies.sh
-    timeout: 30
-    runas: root
+# BeforeInstall:
+#   - location: scripts/install_dependencies.sh
+#     timeout: 30
+#     runas: root
 ApplicationStart:
-  - location: scripts/start_server.sh
+  - location: scripts/run_node_srv.sh
     timeout: 30
     runas: root
