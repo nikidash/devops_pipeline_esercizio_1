@@ -29,15 +29,15 @@ files:
     destination: /home/ubuntu/sample_app/scripts/
 file_exists_behavior: OVERWRITE
 hooks:
-ApplicationStop:
-  - location: scripts/stop_node_srv.sh
-    timeout: 30
-    runas: root
-BeforeInstall:
-  - location: scripts/install_node_dependencies.sh
-    timeout: 30
-    runas: root
-ApplicationStart:
-  - location: scripts/run_node_srv.sh
-    timeout: 30
-    runas: root
+  ApplicationStop:
+    - location: scripts/stop_node_srv.sh
+      timeout: 30
+      runas: root
+  BeforeInstall:
+    - location: scripts/install_node_dependencies.sh
+      timeout: 30
+      runas: root
+  ApplicationStart:
+    - location: scripts/run_node_srv.sh
+      timeout: 30
+      runas: root
