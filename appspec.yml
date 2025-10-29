@@ -29,6 +29,8 @@ files:
     destination: /home/ubuntu/sample_app/node_srv
   - source: scripts/
     destination: /home/ubuntu/sample_app/scripts/
+  - source: /nginx_conf/default
+    destination: /etc/nginx/sites-enabled/
 file_exists_behavior: OVERWRITE
 hooks:
   ApplicationStop:
