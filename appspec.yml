@@ -34,10 +34,10 @@ ApplicationStop:
     timeout: 30
     runas: root
 BeforeInstall:
-  - location: /home/ubuntu/sample_app/scripts/install_node_dependencies.sh
+  - location: scripts/install_node_dependencies.sh
     timeout: 30
     runas: root
 ApplicationStart:
-  - location: /home/ubuntu/sample_app/scripts/run_node_srv.sh
+  - location: scripts/run_node_srv.sh
     timeout: 30
     runas: root
