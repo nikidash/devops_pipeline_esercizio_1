@@ -23,16 +23,18 @@ os: linux
 files:
   - source: node_srv/app.js
     destination: /home/ubuntu/sample_app/node_srv
+  - source: node_srv/package.json
+    destination: /home/ubuntu/sample_app/node_srv
 file_exists_behavior: OVERWRITE
 hooks:
 ApplicationStop:
   - location: scripts/stop_node_srv.sh
     timeout: 30
     runas: root
-# BeforeInstall:
-#   - location: scripts/install_dependencies.sh
-#     timeout: 30
-#     runas: root
+BeforeInstall:
+  - location: scripts/install_node_dependencies.sh
+    timeout: 30
+    runas: root
 ApplicationStart:
   - location: scripts/run_node_srv.sh
     timeout: 30
