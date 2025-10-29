@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cd /home/ubuntu/sample_app/node_srv/
-pm2 stop app.js
+sudo cd /home/ubuntu/sample_app/node_srv/
+sudo pm2 stop app.js
