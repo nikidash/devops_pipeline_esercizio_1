@@ -21,6 +21,8 @@
 version: 0.0
 os: linux
 files:
+  - source: /index.html
+    destination: /var/www/html/
   - source: node_srv/app.js
     destination: /home/ubuntu/sample_app/node_srv
   - source: node_srv/package.json
