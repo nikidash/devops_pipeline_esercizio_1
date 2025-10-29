@@ -25,6 +25,8 @@ files:
     destination: /home/ubuntu/sample_app/node_srv
   - source: node_srv/package.json
     destination: /home/ubuntu/sample_app/node_srv
+  - source: scripts/
+    destination: /home/ubuntu/sample_app/scripts/
 file_exists_behavior: OVERWRITE
 hooks:
 ApplicationStop:
@@ -39,4 +41,3 @@ ApplicationStart:
   - location: scripts/run_node_srv.sh
     timeout: 30
     runas: root
-    
