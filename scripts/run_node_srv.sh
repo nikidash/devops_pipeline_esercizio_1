@@ -1,4 +1,5 @@
 #!/bin/bash
 
 cd /home/ubuntu/sample_app/node_srv/
-pm2 start app.js
+pm2 restart app.js
+aklsaslkjgfhasfkljhs
