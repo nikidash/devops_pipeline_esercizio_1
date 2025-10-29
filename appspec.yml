@@ -39,3 +39,4 @@ ApplicationStart:
   - location: scripts/run_node_srv.sh
     timeout: 30
     runas: root
+    
